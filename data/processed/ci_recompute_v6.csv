@@ -1,0 +1,3 @@
+"method","auc","ci_low","ci_high","B","seed","reproducible_from_saved_data","note"
+"weighted case-control bootstrap (PRIMARY)",0.8133,0.7599,0.8635,5000,20240726,TRUE,"uses survey weight w_core; replaces V5's non-reproducible replicate-weight label"
+"DeLong analytic (cross-check)",0.8133,0.7775,0.8492,NA,NA,TRUE,"unweighted DeLong SE x1.96 around weighted AUC 0.813"

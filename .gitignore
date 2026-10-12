@@ -1,0 +1,28 @@
+# R session artifacts
+.Rhistory
+.RData
+.Ruserdata
+.Rapp.history
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Office temp files
+~$*.xlsx
+~$*.docx
+
+# Downloaded raw NHANES data (public; fetched by analysis/01_cohort_construction.R)
+data/raw_nhanes/
+
+# EVA4YOU raw data (NOT redistributed -- download from the original publication)
+data/processed/eva4you_raw.xlsx
+
+# Regenerated outputs
+output/*
+!output/.gitkeep
+
+# Editor / environment
+*.swp
+.venv/
+__pycache__/

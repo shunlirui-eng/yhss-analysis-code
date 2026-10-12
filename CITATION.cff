@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software or model, please cite it as below."
+title: "Y-HSS: Youth Hepatic Steatosis Score -- a parsimonious fasting-free screening model for adolescent hepatic steatosis"
+# TODO before public release: replace with the final author list exactly as on
+# the manuscript.
+authors:
+  - family-names: "TODO-lastname"
+    given-names: "TODO-firstname"
+    # orcid: "https://orcid.org/0000-0000-0000-0000"
+# TODO: add the repository URL after creating the GitHub repo.
+# url: "https://github.com/<username>/Y-HSS"
+license: MIT
+notes: "Manuscript under review at npj Digital Medicine. Update this file with the article DOI on publication."

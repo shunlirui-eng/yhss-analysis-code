@@ -1,0 +1,59 @@
+  :root {
+    --blue: #0279EE; --green: #75A025; --orange: #FF9400;
+    --bg: #FAF9F3; --card: #FFFFFF; --ink: #1a1a1a; --muted: #666;
+    --line: #ECE9E2;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+         background: var(--bg); color: var(--ink); line-height: 1.6; padding: 16px; }
+  .wrap { max-width: 720px; margin: 0 auto; }
+  header { text-align: center; padding: 20px 0 12px; position: relative; }
+  header h1 { font-size: 1.45rem; color: var(--blue); }
+  header p { color: var(--muted); font-size: 0.85rem; margin-top: 4px; }
+  #langBtn { position: absolute; top: 18px; right: 0; padding: 6px 14px; font-size: 0.82rem;
+             color: var(--blue); background: #fff; border: 1px solid var(--blue);
+             border-radius: 999px; cursor: pointer; }
+  #langBtn:hover { background: var(--blue); color: #fff; }
+  .tabs { display: flex; gap: 8px; margin: 14px 0 0; }
+  .tab { flex: 1; padding: 12px 8px; font-size: 0.95rem; font-weight: 600; text-align: center;
+         background: #fff; color: var(--muted); border: 1px solid var(--line);
+         border-radius: 10px 10px 0 0; cursor: pointer; border-bottom: none; }
+  .tab.active { background: var(--blue); color: #fff; border-color: var(--blue); }
+  .model-desc { font-size: 0.82rem; color: var(--muted); background: #fff;
+                border: 1px solid var(--line); border-top: none; padding: 10px 16px;
+                border-radius: 0 0 10px 10px; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px;
+          padding: 20px; margin: 14px 0; box-shadow: 0 1px 3px rgba(0,0,0,.04); }
+  .card h2 { font-size: 1.05rem; margin-bottom: 12px; color: var(--ink); }
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+  @media (max-width: 560px) { .grid { grid-template-columns: 1fr; } }
+  label { display: block; font-size: 0.88rem; color: var(--muted); margin-bottom: 4px; }
+  input, select { width: 100%; padding: 10px 12px; border: 1px solid #d8d4c8; border-radius: 8px;
+                  font-size: 1rem; background: #fff; }
+  input:focus, select:focus { outline: 2px solid var(--blue); outline-offset: -1px; }
+  .field .hint { font-size: 0.75rem; color: #999; margin-top: 2px; }
+  .err { color: #c0392b; font-size: 0.8rem; margin-top: 2px; display: none; }
+  button.calc { width: 100%; padding: 14px; font-size: 1.1rem; font-weight: 600; color: #fff;
+                background: var(--blue); border: none; border-radius: 10px; cursor: pointer; margin-top: 6px; }
+  button.calc:hover { filter: brightness(1.08); }
+  #result { display: none; }
+  .model-used { text-align: center; font-size: 0.78rem; color: var(--muted); margin-bottom: 8px; }
+  .verdict { text-align: center; padding: 16px; border-radius: 10px; font-size: 1.15rem; font-weight: 700; }
+  .verdict.high { background: #FFF3E0; color: #B36A00; border: 1px solid var(--orange); }
+  .verdict.low  { background: #F0F6E4; color: #4c6b17; border: 1px solid var(--green); }
+  .prob-line { text-align: center; margin-top: 10px; font-size: 0.95rem; }
+  .prob-line b { font-size: 1.3rem; }
+  .note { font-size: 0.82rem; color: var(--muted); margin-top: 10px; }
+  .advice { margin-top: 12px; padding: 12px 14px; background: var(--bg); border-radius: 8px; font-size: 0.92rem; }
+  .advice ul { padding-left: 20px; margin-top: 6px; }
+  .warn-lean { margin-top: 10px; padding: 10px 14px; background: #FDF0F7; border: 1px solid #FD9BED;
+               border-radius: 8px; font-size: 0.85rem; }
+  .pro-toggle { text-align: center; margin: 10px 0 0; }
+  .pro-toggle a { color: var(--blue); font-size: 0.85rem; cursor: pointer; text-decoration: underline; }
+  #proPanel { display: none; margin-top: 12px; border-top: 1px dashed var(--line); padding-top: 12px; }
+  #proPanel table { width: 100%; border-collapse: collapse; font-size: 0.85rem; }
+  #proPanel td, #proPanel th { padding: 6px 8px; border-bottom: 1px solid var(--line); text-align: left; }
+  #proPanel th { color: var(--muted); font-weight: 600; }
+  footer { font-size: 0.78rem; color: var(--muted); padding: 14px 6px 30px; }
+  footer b { color: #444; }
+  footer p { margin-bottom: 8px; }

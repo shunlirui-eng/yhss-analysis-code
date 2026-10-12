@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Y-HSS 青少年脂肪肝筛查工具</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <button id="langBtn" onclick="toggleLang()">English</button>
+    <h1 data-i18n="title"></h1>
+    <p data-i18n="subtitle"></p>
+  </header>
+
+  <div class="tabs">
+    <button class="tab active" id="tabYhss" onclick="setModel('yhss')" data-i18n="tab_yhss"></button>
+    <button class="tab" id="tabNoalt" onclick="setModel('noalt')" data-i18n="tab_noalt"></button>
+  </div>
+  <div class="model-desc" id="modelDesc"></div>
+
+  <div class="card">
+    <h2 data-i18n="form_title"></h2>
+    <div class="grid">
+      <div class="field">
+        <label for="birth" data-i18n="birth"></label>
+        <input type="date" id="birth">
+      </div>
+      <div class="field">
+        <label for="exam" data-i18n="exam"></label>
+        <input type="date" id="exam">
+        <div class="hint" data-i18n="exam_hint"></div>
+      </div>
+      <div class="field">
+        <label for="sex" data-i18n="sex"></label>
+        <select id="sex">
+          <option value="" data-i18n="sex_select"></option>
+          <option value="1" data-i18n="male"></option>
+          <option value="2" data-i18n="female"></option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="height" data-i18n="height"></label>
+        <input type="number" id="height" step="0.1" min="120" max="200" data-i18n-ph="ph_height">
+      </div>
+      <div class="field">
+        <label for="weight" data-i18n="weight"></label>
+        <input type="number" id="weight" step="0.1" min="25" max="250" data-i18n-ph="ph_weight">
+      </div>
+      <div class="field">
+        <label for="waist" data-i18n="waist"></label>
+        <input type="number" id="waist" step="0.1" min="40" max="200" data-i18n-ph="ph_waist">
+        <div class="hint" data-i18n="waist_hint"></div>
+      </div>
+      <div class="field" id="altField">
+        <label for="alt" data-i18n="alt"></label>
+        <input type="number" id="alt" step="1" min="1" max="2000" data-i18n-ph="ph_alt">
+        <div class="hint" data-i18n="alt_hint"></div>
+      </div>
+    </div>
+    <div class="err" id="errBox"></div>
+    <button class="calc" onclick="calculate()" data-i18n="calc_btn"></button>
+  </div>
+
+  <div class="card" id="result">
+    <h2 data-i18n="result_title"></h2>
+    <div class="model-used" id="modelUsed"></div>
+    <div class="verdict" id="verdict"></div>
+    <div class="prob-line" id="probLine"></div>
+    <div class="note" id="compressNote"></div>
+    <div class="advice" id="advice"></div>
+    <div class="warn-lean" id="leanWarn" style="display:none" data-i18n="lean_warn"></div>
+    <div class="pro-toggle"><a id="proLink" onclick="togglePro()" data-i18n="pro_show"></a></div>
+    <div id="proPanel">
+      <table>
+        <tr><th data-i18n="pro_th_metric"></th><th data-i18n="pro_th_value"></th></tr>
+        <tr><td data-i18n="pro_lp"></td><td id="proLp"></td></tr>
+        <tr><td data-i18n="pro_p"></td><td id="proP"></td></tr>
+        <tr><td data-i18n="pro_t90"></td><td id="proT90"></td></tr>
+        <tr><td data-i18n="pro_age"></td><td id="proAge"></td></tr>
+        <tr><td data-i18n="pro_bmi"></td><td id="proBmi"></td></tr>
+        <tr><td data-i18n="pro_bmiz"></td><td id="proBmiz"></td></tr>
+        <tr><td data-i18n="pro_bmip"></td><td id="proBmip"></td></tr>
+        <tr><td data-i18n="pro_whtr"></td><td id="proWhtr"></td></tr>
+        <tr id="proLnaltRow"><td data-i18n="pro_lnalt"></td><td id="proLnalt"></td></tr>
+      </table>
+      <div class="note" style="margin-top:10px" id="perfNote"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p><b data-i18n="disc_title"></b></p>
+    <p data-i18n-html="disc1"></p>
+    <p data-i18n-html="disc2"></p>
+    <p data-i18n-html="disc3"></p>
+    <p data-i18n="disc4"></p>
+  </footer>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
